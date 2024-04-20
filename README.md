@@ -1,3 +1,58 @@
+
+# ShortNews
+
+ShortNews is a React-based web application inspired by InShorts. It allows users to quickly catch up on the latest news headlines across various categories. The project is built using React, Material-UI for the UI components, and fetches news data using the News API.
+
+## Technologies Used
+
+- React
+- Material-UI
+- React Router DOM
+- News API
+
+## Features
+
+- View top headlines in various news categories.
+- Infinite scroll for continuous news reading.
+- Responsive design for a seamless experience on different devices.
+
+## Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/techjmi/ShortNews-Website.git
+   cd ShortNews
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the project root and add your News API key:
+
+   ```dotenv
+   REACT_APP_NEWS_API=your-news-api-key
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open the application in your browser:
+
+   ```
+   http://localhost:3000
+   ```
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
