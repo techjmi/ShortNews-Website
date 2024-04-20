@@ -70,10 +70,10 @@ const Description = ({ data }) => {
                 {!data.author ? "Unknown" : data.author}
               </Typography>
               <Typography variant="caption">
-                &nbsp;{new Date(data.publishedAt).toGMTString()}
+                &nbsp;{new Date(data.publishedAt).toGMTString()} &nbsp; 
               </Typography>
               <Typography variant="caption">
-                &nbsp; <strong>source</strong> {data.source.name}
+               <strong>source</strong> {data.source.name}
               </Typography>
             </BoxAut>
             <Typography style={{marginTop:".5rem"}}>{data.description}</Typography>

@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 
 function App() {
   const apiKey = process.env.REACT_APP_NEWS_API
+//  const apiKey= "8fc50522d62b4706a954c30eb629fb29"
   return (
     <>
     <BrowserRouter>

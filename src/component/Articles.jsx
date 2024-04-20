@@ -11,6 +11,7 @@ const BoxStyled = styled(Box)({
   padding: ".5rem",
 });
 
+
 const Articles = (props) => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ const Articles = (props) => {
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
+
   const updateNews = async () => {
     setLoading(true);
     const URL = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${props.apiKey}`;
@@ -25,24 +27,22 @@ const Articles = (props) => {
     let parsedData = await data.json();
     console.log(parsedData);
     setNews(parsedData.articles);
-    setTotalResults(parsedData.totalResults);
+    setTotalResults(parsedData.totalResults); // Update totalResults here
     setLoading(false);
   };
+
   const fetchMoreData = async () => {
     const URL = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${props.apiKey}`;
-    // setPage(page+1)
     let data = await fetch(URL);
     let parsedData = await data.json();
     setNews(news.concat(parsedData.articles));
-    // setTotalResults(parsedData.totalResults)
+    setTotalResults(parsedData.totalResults); // Update totalResults here
   };
+
   useEffect(() => {
     setNews([]);
     updateNews();
-    // fetchMoreData()
-    // document.title=`${props.category}`
     document.title = `${capitalizeFirstLetter(props.category)}`;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.category]);
 
   return (
